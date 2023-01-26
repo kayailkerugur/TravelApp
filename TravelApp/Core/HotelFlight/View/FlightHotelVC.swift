@@ -13,6 +13,8 @@ import Kingfisher
 
 class FlightHotelVC: UIViewController {
     
+    let viewModel = FlightHotelViewModel(service: HotelNetworkManager())
+    
     var status = whatisStatues.flight
     
     var flightList: [FlightModel] = []
@@ -34,6 +36,7 @@ class FlightHotelVC: UIViewController {
         getXIBHotels()
         
         
+        
         collectionView.delegate = self
         collectionView.dataSource = self
         
@@ -49,6 +52,17 @@ class FlightHotelVC: UIViewController {
         //let tappedImage = tapGestureRecognizer.view as! UIImageView
         self.navigationController?.popToRootViewController(animated: true)
         // Your action
+    }
+    
+    func fetchHotels(){
+        viewModel.fetchHotels()
+        
+        viewModel.didFinishFetch = {
+            self.hotels = self.viewModel.hotel
+        }
+            
+            
+            
     }
     
     func controlTitle(){
@@ -67,6 +81,7 @@ class FlightHotelVC: UIViewController {
             self.collectionView.reloadData()
         } else if status == whatisStatues.hotel {
             getHotel()
+            //fetchHotels()
             self.collectionView.reloadData()
         }
     }
@@ -84,7 +99,7 @@ class FlightHotelVC: UIViewController {
     func getFlight() {
         let url = Environment.baseURL + Environment.api_key + Environment.limit
         AF.request(url).response { response in
-            
+
             let data : JSON = JSON(response.data!)
             let flightsJS = data["data"].arrayValue
             for flightJS in flightsJS {
@@ -95,33 +110,33 @@ class FlightHotelVC: UIViewController {
             }
         }
     }
-    
+    //&to=20
     func getHotel() {
         let baseUrl = "https://api.test.hotelbeds.com"
         let contentUrl = "/hotel-content-api/1.0"
         let head: HTTPHeaders = getHeader()
         let url = baseUrl + contentUrl
-        AF.request(url + "/hotels?destinationCode=ABC&from=1&useSecondaryLanguage=false&fields=name,code,description,countryCode,address,city,images&to=20", method:.get, headers: head).validate().responseDecodable(of: Hotel.self) { response in
+        AF.request(url + "/hotels?destinationCode=ABC&from=1&useSecondaryLanguage=false&fields=name,code,description,countryCode,address,city,images", method:.get, headers: head).validate().responseDecodable(of: Hotel.self) { response in
 
-            
+
             guard let response = response.value else {print(response); return }
-            
+
             for res in response.hotels {
                 self.hotels.append(res)
                 self.collectionView.reloadData()
             }
             print("666\(self.hotels)")
-      
+
         }
-        
+
     }
     // 8fc1a187f91287e2cf4da8d06cc83f2a
     // 8a286ab870
     // 4782c4caff0ca4813bbef375fbcbc48b
     // 02e05682b2
     func calculateXSig() -> String {
-        let apiKey = "4782c4caff0ca4813bbef375fbcbc48b"
-        let secret = "02e05682b2"
+        let apiKey = "8fc1a187f91287e2cf4da8d06cc83f2a"
+        let secret = "8a286ab870"
         let time = Int(NSDate().timeIntervalSince1970)
         let input = apiKey + secret + String(time)
         let inputD = Data(input.utf8)
@@ -132,7 +147,7 @@ class FlightHotelVC: UIViewController {
     }
     
     func getHeader() -> HTTPHeaders {
-        let apiKey = "4782c4caff0ca4813bbef375fbcbc48b"
+        let apiKey = "8fc1a187f91287e2cf4da8d06cc83f2a"
         return ["Accept":"application/json",  "Accept-Encoding":"gzip", "X-Signature":calculateXSig(), "Api-key": apiKey]
     }
 
@@ -148,7 +163,6 @@ extension FlightHotelVC: UICollectionViewDelegate, UICollectionViewDataSource {
         } else {
             return 0
         }
-        
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -162,9 +176,17 @@ extension FlightHotelVC: UICollectionViewDelegate, UICollectionViewDataSource {
         } else if status == whatisStatues.hotel {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "hotelcell", for: indexPath) as! HotelCell
             let data = hotels[indexPath.row]
+            
+            
             let descriptionText = "\(String(describing: data.address.content!))/\(String(describing: data.address.street!))"
-            let image = data.images![0].path
-            let url = URL(string: "http://photos.hotelbeds.com/giata/bigger/\(image)")!
+            let image = data.images?[0].path
+            let url = URL(string: "http://photos.hotelbeds.com/giata/bigger/\(image ?? "")")
+            DispatchQueue.global().async {
+                DispatchQueue.main.async {
+                    cell.hotelImage.kf.setImage(with: url)
+                    
+                }  
+            }
             
             cell.hotelImage.contentMode = .scaleToFill
             
@@ -172,17 +194,7 @@ extension FlightHotelVC: UICollectionViewDelegate, UICollectionViewDataSource {
             cell.descriptionLabel.text = descriptionText
             
             cell.hotelImage.contentMode = .bottom
-            DispatchQueue.global().async {
-                
-                let imageData = try? Data(contentsOf: url)
-                    DispatchQueue.main.async {
-                        cell.hotelImage.kf.setImage(with: url)
-                        
-                    }
-                    
-                
-            }
-
+            
             
             return cell
         } else {

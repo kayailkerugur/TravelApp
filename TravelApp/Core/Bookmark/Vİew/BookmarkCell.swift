@@ -8,6 +8,13 @@
 import UIKit
 
 class BookmarkCell: UITableViewCell {
+    
+    @IBOutlet weak var backImge: UIImageView!
+    
+    @IBOutlet weak var nameLabel: UILabel!
+    
+    @IBOutlet weak var descriptionLabel: UILabel!
+    
 
     override func awakeFromNib() {
         super.awakeFromNib()
