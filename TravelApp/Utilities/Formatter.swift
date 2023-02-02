@@ -16,7 +16,6 @@ class Formatter {
         let dateFormatterPrint = DateFormatter()
         dateFormatterPrint.dateFormat = "dd.MM.yyyy"
         
-        
         let date = dateFormat.date(from: time)
         return dateFormatterPrint.string(from: date!)
     }
@@ -27,7 +26,6 @@ class Formatter {
         
         let dateFormatterPrint = DateFormatter()
         dateFormatterPrint.dateFormat = "HH:mm"
-        
         
         let time = timeFormat.date(from: time)
         return dateFormatterPrint.string(from: time!)

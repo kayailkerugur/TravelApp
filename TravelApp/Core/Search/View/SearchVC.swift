@@ -14,6 +14,7 @@ enum whatisStatues {
     case hotel
     case flight
     case bookmark
+    case bookmarkHotel
 }
 
 class SearchVC: UIViewController {
@@ -28,17 +29,14 @@ class SearchVC: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    
     @IBOutlet weak var hotelImageView: UIImageView!
     
     @IBOutlet weak var flightImageView: UIImageView!
-    
     
     @IBOutlet weak var searchText: UISearchBar!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         flightControl()
         getXIB()
         
@@ -106,7 +104,6 @@ class SearchVC: UIViewController {
         let url = baseUrl + contentUrl
         AF.request(url + "/hotels?destinationCode=ABC&from=1&useSecondaryLanguage=false&fields=name,code,description,countryCode,address,city,images&to=20", method:.get, headers: head).validate().responseDecodable(of: Hotel.self) { response in
 
-            
             guard let response = response.value else {print(response); return }
             
             for res in response.hotels {
@@ -114,7 +111,6 @@ class SearchVC: UIViewController {
                 self.tableView.reloadData()
             }
             print("666\(self.hotels)")
-      
         }
         
     }
@@ -188,14 +184,12 @@ extension SearchVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if status == whatisStatues.flight {
             let destinationVC = storyboard?.instantiateViewController(withIdentifier: "detailVC") as! DetailVC
-            let data = filteredFlight[indexPath.row]
-            destinationVC.flightList = [data]
+            destinationVC.flightList = filteredFlight[indexPath.row]
             destinationVC.status = whatisStatues.flight
             self.navigationController?.pushViewController(destinationVC, animated: true)
         } else if status == whatisStatues.hotel {
             let destinationVC = storyboard?.instantiateViewController(withIdentifier: "detailVC") as! DetailVC
-            let data = filteredHotels[indexPath.row]
-            destinationVC.hotels = [data]
+            destinationVC.hotels = filteredHotels[indexPath.row]
             destinationVC.status = whatisStatues.hotel
             self.navigationController?.pushViewController(destinationVC, animated: true)
         }
@@ -219,7 +213,6 @@ extension SearchVC: UISearchBarDelegate {
                 self.tableView.reloadData()
             }
         } else if status == whatisStatues.hotel {
-            
             filteredHotels = []
             if searchText.count < 3 {
                 filteredHotels = []
@@ -233,10 +226,5 @@ extension SearchVC: UISearchBarDelegate {
                 self.tableView.reloadData()
             }
         }
-        
-        
-        
-        
-        
     }
 }

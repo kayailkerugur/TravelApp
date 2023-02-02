@@ -15,8 +15,5 @@ class FlightCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
-        
     }
-
 }

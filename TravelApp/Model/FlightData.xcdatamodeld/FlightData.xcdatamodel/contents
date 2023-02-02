@@ -10,7 +10,7 @@
     </entity>
     <entity name="Hotels" representedClassName="Hotels" syncable="YES" codeGenerationType="class">
         <attribute name="descrip" optional="YES" attributeType="String"/>
-        <attribute name="hotelImage" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES"/>
+        <attribute name="hotelImg" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES"/>
         <attribute name="hotelName" optional="YES" attributeType="String"/>
     </entity>
 </model>

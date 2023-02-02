@@ -15,7 +15,6 @@ class HomeCell: UICollectionViewCell {
     
     @IBOutlet weak var descriptionLabel: UILabel!
     
-    
     @IBOutlet weak var bookmarkImage: UIImageView!
     
     override func awakeFromNib() {
@@ -28,7 +27,6 @@ class HomeCell: UICollectionViewCell {
     
     @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer){
         //let tappedImage = tapGestureRecognizer.view as! UIImageView // 1
-        
         control()
     }
     
@@ -39,5 +37,4 @@ class HomeCell: UICollectionViewCell {
             bookmarkImage.image = UIImage(systemName: "bookmark")
         }
     }
-
 }

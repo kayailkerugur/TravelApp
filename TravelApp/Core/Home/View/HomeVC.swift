@@ -13,7 +13,6 @@ class HomeVC: UIViewController {
 
     @IBOutlet weak var imageView: UIImageView!
     
-    
     @IBOutlet weak var hotelImage: UIImageView!
     
     @IBOutlet weak var collectionView: UICollectionView!
@@ -36,9 +35,6 @@ class HomeVC: UIViewController {
         let tapGestureRecognizer2 = UITapGestureRecognizer(target: self, action: #selector(hotelImageTapped(tapGestureRecognizer:)))
         hotelImage.isUserInteractionEnabled = true
         hotelImage.addGestureRecognizer(tapGestureRecognizer2)
-        
-        
-        
     }
     @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer){
         //let tappedImage = tapGestureRecognizer.view as! UIImageView // 1
@@ -74,6 +70,4 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource {
         cell.image.image = UIImage(named: imageList[indexPath.row])
         return cell
     }
-    
-    
 }

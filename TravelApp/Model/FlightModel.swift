@@ -28,6 +28,5 @@ struct FlightModel: Codable {
         self.arrival_iata = json["arrival"]["iata"].stringValue
         self.departure_iata = json["departure"]["iata"].stringValue
     }
-    
 }
 

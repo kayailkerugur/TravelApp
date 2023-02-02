@@ -15,11 +15,9 @@
 		8616EB9929798C1000770824 /* BookmarkCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8616EB9729798C1000770824 /* BookmarkCell.xib */; };
 		8620AEA6297AB91B00BCE95A /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8620AEA4297AB91B00BCE95A /* HomeCell.swift */; };
 		8620AEA7297AB91B00BCE95A /* HomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8620AEA5297AB91B00BCE95A /* HomeCell.xib */; };
-		8620AEAB297AC57300BCE95A /* HotelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8620AEAA297AC57300BCE95A /* HotelVC.swift */; };
 		8620AEAE297AC72600BCE95A /* HotelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8620AEAC297AC72600BCE95A /* HotelCell.swift */; };
 		8620AEAF297AC72600BCE95A /* HotelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8620AEAD297AC72600BCE95A /* HotelCell.xib */; };
 		8620AEB1297ACE3300BCE95A /* HotelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8620AEB0297ACE3300BCE95A /* HotelModel.swift */; };
-		8668D63B298173C70074356D /* FlightHotelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8668D63A298173C70074356D /* FlightHotelViewModel.swift */; };
 		867B94982975BAC600A9640C /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867B94972975BAC600A9640C /* SearchVC.swift */; };
 		867B949D2975BC6600A9640C /* BookmarkVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867B949C2975BC6600A9640C /* BookmarkVC.swift */; };
 		86AC3AAF2975958800FAE930 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86AC3AAE2975958800FAE930 /* AppDelegate.swift */; };
@@ -29,11 +27,8 @@
 		86AC3ABE2975958900FAE930 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86AC3ABC2975958900FAE930 /* LaunchScreen.storyboard */; };
 		86C2B5532976D1A200CA3AE5 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C2B5522976D1A200CA3AE5 /* Environment.swift */; };
 		86C2B5552976D4D900CA3AE5 /* FlightModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C2B5542976D4D900CA3AE5 /* FlightModel.swift */; };
-		86C2B5572976D75D00CA3AE5 /* FlightNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C2B5562976D75C00CA3AE5 /* FlightNetworkManager.swift */; };
 		86C2B5592976D7D200CA3AE5 /* Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C2B5582976D7D200CA3AE5 /* Formatter.swift */; };
 		86CE7B6A29792B5E0003AE81 /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86CE7B6929792B5E0003AE81 /* DetailVC.swift */; };
-		86FAABCD2977D2D50050CF61 /* HotelNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86FAABCC2977D2D50050CF61 /* HotelNetworkManager.swift */; };
-		86FAABD12977FD870050CF61 /* FlightVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86FAABD02977FD870050CF61 /* FlightVC.swift */; };
 		86FAABD42977FFFD0050CF61 /* FlightCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86FAABD22977FFFC0050CF61 /* FlightCell.swift */; };
 		86FAABD52977FFFD0050CF61 /* FlightCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86FAABD32977FFFD0050CF61 /* FlightCell.xib */; };
 		86FE90ED297EA6E700DB84FF /* FlightHotelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86FE90EC297EA6E700DB84FF /* FlightHotelVC.swift */; };
@@ -50,11 +45,9 @@
 		8616EB9729798C1000770824 /* BookmarkCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookmarkCell.xib; sourceTree = "<group>"; };
 		8620AEA4297AB91B00BCE95A /* HomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
 		8620AEA5297AB91B00BCE95A /* HomeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeCell.xib; sourceTree = "<group>"; };
-		8620AEAA297AC57300BCE95A /* HotelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelVC.swift; sourceTree = "<group>"; };
 		8620AEAC297AC72600BCE95A /* HotelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelCell.swift; sourceTree = "<group>"; };
 		8620AEAD297AC72600BCE95A /* HotelCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HotelCell.xib; sourceTree = "<group>"; };
 		8620AEB0297ACE3300BCE95A /* HotelModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelModel.swift; sourceTree = "<group>"; };
-		8668D63A298173C70074356D /* FlightHotelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightHotelViewModel.swift; sourceTree = "<group>"; };
 		867B94972975BAC600A9640C /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
 		867B949C2975BC6600A9640C /* BookmarkVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkVC.swift; sourceTree = "<group>"; };
 		86AC3AAB2975958800FAE930 /* TravelApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TravelApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -66,11 +59,8 @@
 		86AC3ABF2975958900FAE930 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		86C2B5522976D1A200CA3AE5 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		86C2B5542976D4D900CA3AE5 /* FlightModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightModel.swift; sourceTree = "<group>"; };
-		86C2B5562976D75C00CA3AE5 /* FlightNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightNetworkManager.swift; sourceTree = "<group>"; };
 		86C2B5582976D7D200CA3AE5 /* Formatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatter.swift; sourceTree = "<group>"; };
 		86CE7B6929792B5E0003AE81 /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
-		86FAABCC2977D2D50050CF61 /* HotelNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelNetworkManager.swift; sourceTree = "<group>"; };
-		86FAABD02977FD870050CF61 /* FlightVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightVC.swift; sourceTree = "<group>"; };
 		86FAABD22977FFFC0050CF61 /* FlightCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightCell.swift; sourceTree = "<group>"; };
 		86FAABD32977FFFD0050CF61 /* FlightCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FlightCell.xib; sourceTree = "<group>"; };
 		86FE90EC297EA6E700DB84FF /* FlightHotelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightHotelVC.swift; sourceTree = "<group>"; };
@@ -119,23 +109,14 @@
 		8616A07D2975B34A0003EF4E /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				8616A07E2975B3530003EF4E /* ViewModel */,
 				8616A07C2975B32D0003EF4E /* View */,
 			);
 			path = Home;
 			sourceTree = "<group>";
 		};
-		8616A07E2975B3530003EF4E /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
 		8620AEA8297AC55600BCE95A /* HotelFlight */ = {
 			isa = PBXGroup;
 			children = (
-				8668D639298173B70074356D /* ViewModel */,
 				8620AEA9297AC55F00BCE95A /* View */,
 			);
 			path = HotelFlight;
@@ -144,20 +125,11 @@
 		8620AEA9297AC55F00BCE95A /* View */ = {
 			isa = PBXGroup;
 			children = (
-				8620AEAA297AC57300BCE95A /* HotelVC.swift */,
 				8620AEAC297AC72600BCE95A /* HotelCell.swift */,
 				8620AEAD297AC72600BCE95A /* HotelCell.xib */,
 				86FE90EC297EA6E700DB84FF /* FlightHotelVC.swift */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		8668D639298173B70074356D /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				8668D63A298173C70074356D /* FlightHotelViewModel.swift */,
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		867B94932975B75F00A9640C /* Core */ = {
@@ -176,7 +148,6 @@
 		867B94942975BA6300A9640C /* Search */ = {
 			isa = PBXGroup;
 			children = (
-				867B94962975BA7500A9640C /* ViewModel */,
 				867B94952975BA6C00A9640C /* View */,
 			);
 			path = Search;
@@ -192,17 +163,9 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		867B94962975BA7500A9640C /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
 		867B94992975BC4300A9640C /* Bookmark */ = {
 			isa = PBXGroup;
 			children = (
-				867B949B2975BC5200A9640C /* ViewModel */,
 				867B949A2975BC4A00A9640C /* View */,
 			);
 			path = Bookmark;
@@ -219,13 +182,6 @@
 			path = "Vİew";
 			sourceTree = "<group>";
 		};
-		867B949B2975BC5200A9640C /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
 		867B949E2975C00400A9640C /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -234,15 +190,6 @@
 				8620AEB0297ACE3300BCE95A /* HotelModel.swift */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		867B949F2975C00C00A9640C /* NetworkService */ = {
-			isa = PBXGroup;
-			children = (
-				86C2B5562976D75C00CA3AE5 /* FlightNetworkManager.swift */,
-				86FAABCC2977D2D50050CF61 /* HotelNetworkManager.swift */,
-			);
-			path = NetworkService;
 			sourceTree = "<group>";
 		};
 		86AC3AA22975958800FAE930 = {
@@ -270,7 +217,6 @@
 				86AC3AAE2975958800FAE930 /* AppDelegate.swift */,
 				86AC3AB02975958800FAE930 /* SceneDelegate.swift */,
 				86C2B54929767E1300CA3AE5 /* Utilities */,
-				867B949F2975C00C00A9640C /* NetworkService */,
 				867B949E2975C00400A9640C /* Model */,
 				867B94932975B75F00A9640C /* Core */,
 				86AC3AB42975958800FAE930 /* Main.storyboard */,
@@ -316,7 +262,6 @@
 		86FAABCF2977FD730050CF61 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				86FAABD02977FD870050CF61 /* FlightVC.swift */,
 				86FAABD22977FFFC0050CF61 /* FlightCell.swift */,
 				86FAABD32977FFFD0050CF61 /* FlightCell.xib */,
 			);
@@ -453,21 +398,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				8620AEB1297ACE3300BCE95A /* HotelModel.swift in Sources */,
-				8668D63B298173C70074356D /* FlightHotelViewModel.swift in Sources */,
 				8616EB912979672D00770824 /* SearchCell.swift in Sources */,
 				867B94982975BAC600A9640C /* SearchVC.swift in Sources */,
 				86C2B5592976D7D200CA3AE5 /* Formatter.swift in Sources */,
 				8616EB9829798C1000770824 /* BookmarkCell.swift in Sources */,
 				867B949D2975BC6600A9640C /* BookmarkVC.swift in Sources */,
-				8620AEAB297AC57300BCE95A /* HotelVC.swift in Sources */,
 				86FAABD42977FFFD0050CF61 /* FlightCell.swift in Sources */,
 				86C2B5552976D4D900CA3AE5 /* FlightModel.swift in Sources */,
 				8616EB952979865600770824 /* FlightData.xcdatamodeld in Sources */,
 				8616A0802975B3750003EF4E /* HomeVC.swift in Sources */,
 				86AC3AAF2975958800FAE930 /* AppDelegate.swift in Sources */,
-				86FAABCD2977D2D50050CF61 /* HotelNetworkManager.swift in Sources */,
-				86FAABD12977FD870050CF61 /* FlightVC.swift in Sources */,
-				86C2B5572976D75D00CA3AE5 /* FlightNetworkManager.swift in Sources */,
 				8620AEA6297AB91B00BCE95A /* HomeCell.swift in Sources */,
 				86FE90ED297EA6E700DB84FF /* FlightHotelVC.swift in Sources */,
 				86AC3AB12975958800FAE930 /* SceneDelegate.swift in Sources */,
